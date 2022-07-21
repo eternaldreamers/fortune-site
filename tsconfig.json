@@ -26,7 +26,7 @@
         "@entities": ["src/entities"],
         "@hocs/*": ["src/hocs/*"],
         "@ioc": ["src/ioc"],
-        "@layout/*": ["src/layout/*"],
+        "@layouts/*": ["src/layouts/*"],
         "@locales/*": ["src/locales/*"],
         "@mocks/*": ["src/mocks/*"],
         "@pages/*": ["src/pages/*"],

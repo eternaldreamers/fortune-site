@@ -2,8 +2,6 @@ const path = require('path')
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   entry: {
@@ -57,8 +55,5 @@ module.exports = {
       template: './public/index.html',
       favicon: './src/assets/favicon.ico',
     }),
-    // new BundleAnalyzerPlugin({
-    //   analyzerHost: "0.0.0.0", // To make it work in the container
-    // }),
   ],
 }
