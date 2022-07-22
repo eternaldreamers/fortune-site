@@ -1129,11 +1129,6 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@experimentallife/serialize@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@experimentallife/serialize/-/serialize-1.0.0.tgz#7a35c8429eee0d6247b5525ec631e38df63d2989"
-  integrity sha512-tm6YQQC0wv5JNl1yaW47TD7UB3mNo9hKO4nNVkVe02N80eaPIULwTbIHDbn5XV2pVmn1H0S8pXs5c/85PMcgAg==
-
 "@gar/promisify@^1.0.1":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
