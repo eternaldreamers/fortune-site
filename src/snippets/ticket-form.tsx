@@ -1,12 +1,25 @@
+import { serializeObject } from '@common/utils/serialize-object'
 import { FunctionalComponent, h } from 'preact'
 
-const TicketFormSnippet: FunctionalComponent = () => {
+type ChildrenProps = {
+  submit: any
+}
+
+const TicketFormSnippet: FunctionalComponent<ChildrenProps> = ({
+  submit,
+}: ChildrenProps) => {
+  const onSubmit = (e: any) => {
+    e.preventDefault()
+    const payload = serializeObject(e.target)
+    submit(payload)
+  }
+
   return (
     <div class="ticket-form">
-      <form class="form">
+      <form onSubmit={onSubmit} class="form">
         <div class="form__section">
           <div class="select-field select-field--base">
-            <select class="select-field__select">
+            <select class="select-field__select" name="type" required>
               {['White', 'Gray', 'Black'].map((type: string, idx: number) => (
                 <option key={idx} value={idx}>
                   {type}

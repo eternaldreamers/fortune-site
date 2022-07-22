@@ -25,7 +25,6 @@
         "@config/*": ["src/config/*"],
         "@entities": ["src/entities"],
         "@hocs/*": ["src/hocs/*"],
-        "@ioc": ["src/ioc"],
         "@layouts/*": ["src/layouts/*"],
         "@locales/*": ["src/locales/*"],
         "@mocks/*": ["src/mocks/*"],
