@@ -1,0 +1,78 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: get-color(text);
+
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-base;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  transition: $transition-all;
+  color: get-color(link);
+  text-decoration: none;
+
+  &:hover {
+    color: get-color(link-hover);
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0;
+
+  color: get-color(heading);
+  font-family: $font-family-heading;
+  line-height: $line-height-heading;
+  font-weight: $font-weight-heading;
+  letter-spacing: $letter-spacing-heading;
+  text-transform: $text-transform-heading;
+}
+
+@each $heading, $value in $headings {
+  #{$heading},
+  .#{$heading} {
+    font-size: $value;
+  }
+}
+
+.text {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-base;
+
+  &--small {
+    font-size: $font-size-small;
+  }
+
+  &--medium {
+    font-size: $font-size-medium;
+  }
+
+  &--muted {
+    color: get-color(text-pale);
+  }
+}
+
+.highlight {
+  color: get-color(primary);
+}

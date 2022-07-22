@@ -1,5 +1,7 @@
 import { Component, h } from 'preact'
 
+import '@styles/admin.scss'
+
 class AdminLayout extends Component {
   render() {
     return (

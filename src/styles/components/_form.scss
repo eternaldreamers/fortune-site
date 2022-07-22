@@ -1,0 +1,35 @@
+.form {
+  &__section {
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__error {
+    display: none;
+    margin-top: 3px;
+    color: get-color(error);
+    font-size: $font-size-small;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  &__response {
+    display: none;
+    margin-top: 11px;
+
+    &.visible {
+      display: block;
+    }
+
+    &--success {
+      color: get-color(success);
+    }
+
+    &--error {
+      color: get-color(error);
+    }
+  }
+}

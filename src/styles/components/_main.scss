@@ -1,0 +1,19 @@
+.main {
+  &__sections {
+    & > * + * {
+      margin-top: 50px;
+
+      @include media-query(sm) {
+        margin-top: 80px;
+      }
+    }
+
+    &--space {
+      margin-top: 16px;
+
+      @include media-query(sm) {
+        margin-top: 32px;
+      }
+    }
+  }
+}

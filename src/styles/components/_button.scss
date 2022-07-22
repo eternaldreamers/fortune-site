@@ -1,0 +1,70 @@
+.button {
+  $this: &;
+
+  display: inline-block;
+
+  transition: opacity $transition-base, border-color $transition-base,
+    background-color $transition-base, color $transition-base;
+
+  border: 0;
+  padding: 13px 22px;
+
+  cursor: pointer;
+
+  text-align: center;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-heading;
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &__spinner {
+    display: none;
+    position: relative;
+    top: 0;
+
+    margin-left: 11px;
+
+    vertical-align: middle;
+  }
+
+  &.loading {
+    #{$this}__spinner {
+      display: inline-block;
+    }
+  }
+
+  &--primary {
+    background-color: get-color(button-primary-background);
+    color: get-color(button-primary-text);
+
+    &:hover {
+      background-color: get-color(button-primary-hover-background);
+      color: get-color(button-primary-hover-text);
+    }
+  }
+
+  &:disabled {
+    background-color: get-color(button-disabled-background) !important;
+    cursor: not-allowed;
+    color: get-color(button-disabled-text) !important;
+  }
+
+  &--large {
+    padding: 19px 27px;
+
+    &\@#{md} {
+      @include media-query(md) {
+        padding: 19px 27px;
+      }
+    }
+  }
+
+  &--expand {
+    display: block;
+    width: 100%;
+  }
+}

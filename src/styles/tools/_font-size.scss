@@ -1,0 +1,7 @@
+@function font-size($size-pixel) {
+  @return px-to-rem($size-pixel * $font-size-scale-base);
+}
+
+@function font-size-heading($size-pixel) {
+  @return px-to-rem($size-pixel * $font-size-scale-heading);
+}

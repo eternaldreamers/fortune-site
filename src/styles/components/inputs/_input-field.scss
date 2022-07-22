@@ -1,0 +1,104 @@
+.input-field {
+  $this: &;
+
+  position: relative;
+
+  border: $input-border;
+  border-radius: $input-border-radius;
+
+  width: 100%;
+  min-width: 80px;
+  height: $input-height;
+
+  background-color: get-color(input-background);
+
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+
+  &:hover {
+    border-color: get-color(input-border-hover);
+  }
+
+  &:focus-within {
+    border-color: get-color(input-border-focus);
+  }
+
+  &__input {
+    @include autofill-fix(get-color(input-text));
+
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transition: color $transition-base;
+
+    -webkit-appearance: none;
+    outline: none;
+
+    border: 0;
+    padding: 0 $input-horizontal-padding;
+
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+    background: get-color(input-background);
+
+    cursor: text;
+
+    color: get-color(input-text);
+    line-height: $input-line-height;
+
+    &:focus,
+    &.filled {
+      padding-top: 1.25em;
+
+      & + #{$this}__label,
+      & + * + #{$this}__label {
+        transform: translateY(-50%) translateY(-0.7em) scale(0.8);
+        color: get-color(text-pale);
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+
+    top: (calc($input-height / 2) - $input-border-width);
+    left: $input-horizontal-padding;
+
+    pointer-events: none;
+
+    transform: translateY(-50%);
+    transform-origin: left center;
+
+    transition: left $transition-base, transform $transition-base,
+      color $transition-base;
+
+    color: get-color(input-label);
+  }
+
+  &--textarea {
+    height: auto;
+
+    #{$this}__input {
+      position: relative;
+      height: 150px;
+      resize: vertical;
+
+      &:focus,
+      &.filled {
+        padding-top: 1.5em;
+      }
+    }
+  }
+
+  &.selected {
+    border-color: get-color(primary);
+  }
+}

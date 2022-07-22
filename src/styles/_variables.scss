@@ -1,0 +1,97 @@
+@charset 'UTF-8';
+
+@import 'tools/px-to-rem';
+@import 'tools/font-size';
+
+$breakpoints: (
+  sm: 680px,
+  md: 1024px,
+  lg: 1440px,
+) !default;
+
+$root: 16px !default;
+
+$container-width: 1140px;
+$container-width-hd: 1600px;
+
+$gutter: px-to-rem(16px);
+$gutter-sm: px-to-rem(32px);
+
+$font-family-heading: 'sharp', sans-serif;
+$font-family-base: 'helvetica', sans-serif;
+
+$font-weight-base: 400;
+$font-weight-heading: 400;
+
+$font-style-base: normal;
+$font-style-heading: normal;
+
+$line-height-base: 1.5 !default;
+$line-height-heading: 1.2 !default;
+
+$text-transform-heading: none;
+
+$letter-spacing-heading: 0px;
+$letter-spacing-wide: px-to-rem(1.28px);
+
+$font-size-scale-base: 1.5 !default;
+$font-size-scale-heading: 1.2 !default;
+
+$font-size-base: font-size(10px);
+$font-size-xsmall: font-size(8px);
+$font-size-small: font-size(10px);
+$font-size-medium: font-size(12px);
+
+$headings: (
+  h1: px-to-rem(40px),
+  h2: px-to-rem(32px),
+  h3: px-to-rem(24px),
+  h4: px-to-rem(20px),
+  h5: px-to-rem(16px),
+  h6: px-to-rem(14px),
+) !default;
+
+$color-primary: #000;
+$color-background: #fff;
+
+$colors: (
+  primary: $color-primary,
+  background: $color-background,
+  text: #000,
+  text-pale: #6c6c6c,
+  link: #0042ff,
+  link-hover: #000,
+  white: #fff,
+  black: #000,
+  success: #4caf50,
+  error: #f44336,
+  heading: #000,
+  input-border: #eee,
+  input-border-hover: #e4e4e4,
+  input-border-focus: #d4d4d4,
+  input-text: #000,
+  input-background: #fff,
+  input-disabled-text: #d3d3d3,
+  input-disabled-background: #f7f7f7,
+  input-label: #000,
+  button-primary-text: #fff,
+  button-primary-background: #0042ff,
+  button-primary-hover-text: #fff,
+  button-primary-hover-background: #000,
+  button-disabled-text: #fff,
+  button-disabled-background: #bbb,
+);
+
+$transition-time: 200ms;
+$transition-base: $transition-time;
+$transition-all: all 200ms;
+
+$input-font-family: $font-family-base;
+$input-font-size: $font-size-base;
+$input-line-height: 1.5;
+$input-border-width: 2px;
+$input-border-radius: 1px;
+$input-border: $input-border-width solid map-get($colors, 'input-border');
+$input-height: 56px;
+$input-horizontal-padding: 14px;
+$input-icon-width: 22px;
