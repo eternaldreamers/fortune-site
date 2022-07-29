@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  fortune-site:
+    image: eternaldreamers/fortune-site
+    restart: always
+    ports:
+      - "4000:4000"
+    networks:
+      fortune-site-network:
+        ipv4_address: 192.168.0.2
+
+networks:
+  fortune-site-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.0.0/28
