@@ -1,9 +1,48 @@
-import { FunctionalComponent, h } from 'preact'
+import { createRef, FunctionalComponent, h } from 'preact'
+import { useEffect } from 'preact/hooks'
 
 import defaultHoc from '@hocs/default'
 
 const IndexPage: FunctionalComponent = () => {
-  return <div>index page</div>
+
+  const fcRef = createRef()
+
+  useEffect(() => {
+    fcRef.current.addEventListener('click', () => {
+      const classList = fcRef.current.classList
+      const spawned = 'spawned'
+      const opened = 'opened'
+
+      if (classList.contains(spawned)) {
+        classList.remove(spawned)
+        classList.add(opened)
+      } else {
+        classList.remove(opened)
+        classList.add(spawned)
+      }
+    })
+  }, [])
+
+  return (
+    <button  ref={fcRef} class="fortune-cookie spawned" type="button" >
+      <div class="fortune-cookie__part left"></div>
+      <div class="fortune-cookie__part right"></div>
+      <div class="fortune-cookie__crumbs">
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+        <div class="fortune-cookie__crumb"></div>
+      </div>
+      <div class="fortune-cookie__fortune">
+	      <p class="fortune-cookie__fortune-text">No fortune</p>
+        <p class="fortune-cookie__lucky-numbers">Lucky Numbers <span>?</span></p>
+      </div>
+    </button>
+  )
 }
 
-export default defaultHoc(IndexPage)
+export default IndexPage

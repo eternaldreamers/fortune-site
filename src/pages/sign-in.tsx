@@ -6,4 +6,4 @@ const SignInPage: FunctionalComponent = () => {
   return <div>sign in page</div>
 }
 
-export default defaultHoc(SignInPage, layoutType.BLANK)
+export default SignInPage

@@ -1,10 +1,11 @@
 import { Component, h } from 'preact'
 
+import '@styles/theme.scss'
+
 class ThemeLayout extends Component {
   render() {
     return (
       <div class="page">
-        <h3>theme layout</h3>
         <div class="theme">{this.props.children}</div>
       </div>
     )

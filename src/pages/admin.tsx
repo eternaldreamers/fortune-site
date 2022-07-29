@@ -6,4 +6,4 @@ const AdminPage: FunctionalComponent = () => {
   return <div>admin page</div>
 }
 
-export default secureHoc(AdminPage)
+export default AdminPage
