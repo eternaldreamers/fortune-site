@@ -4,7 +4,6 @@ import { useEffect } from 'preact/hooks'
 import defaultHoc from '@hocs/default'
 
 const IndexPage: FunctionalComponent = () => {
-
   const fcRef = createRef()
 
   useEffect(() => {
@@ -24,24 +23,36 @@ const IndexPage: FunctionalComponent = () => {
   }, [])
 
   return (
-    <button  ref={fcRef} class="fortune-cookie spawned" type="button" >
-      <div class="fortune-cookie__part left"></div>
-      <div class="fortune-cookie__part right"></div>
-      <div class="fortune-cookie__crumbs">
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
-        <div class="fortune-cookie__crumb"></div>
+    <div class="container wrapper">
+      <div className="fortune-cookie">
+        <div class="fortune-cookie__wrapper">
+          <button
+            ref={fcRef}
+            class="fortune-cookie__button spawned"
+            type="button"
+          >
+            <div class="fortune-cookie__part left"></div>
+            <div class="fortune-cookie__part right"></div>
+            <div class="fortune-cookie__crumbs">
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+              <div class="fortune-cookie__crumb"></div>
+            </div>
+            <div class="fortune-cookie__fortune">
+              <p class="fortune-cookie__fortune-text">No fortune</p>
+              <p class="fortune-cookie__lucky-numbers">
+                Lucky Numbers <span>?</span>
+              </p>
+            </div>
+          </button>
+        </div>
       </div>
-      <div class="fortune-cookie__fortune">
-	      <p class="fortune-cookie__fortune-text">No fortune</p>
-        <p class="fortune-cookie__lucky-numbers">Lucky Numbers <span>?</span></p>
-      </div>
-    </button>
+    </div>
   )
 }
 
