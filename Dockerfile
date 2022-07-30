@@ -9,6 +9,6 @@ COPY ./webpack ./webpack
 
 RUN rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
 
-EXPOSE 4000
+EXPOSE 3000
 
 CMD yarn start;
