@@ -5,7 +5,7 @@ const devConfig = {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
-    port: 4000,
+    port: 3000,
     historyApiFallback: true,
     allowedHosts: "all"
   },
